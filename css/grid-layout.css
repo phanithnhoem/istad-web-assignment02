@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 60px 4%;
+
+    & h2 {
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+
+    & p {
+        font-size: .8rem;
+    }
+
+    & .header {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: 120px 100px;
+        grid-template-areas: 
+            "cgl cgl cgl cgl cgl vt vt"
+            "gsg gsg gsg gsg gsg gsg gsg";
+        row-gap: 20px;
+        column-gap: 12px;
+
+        & .css-grid-layout {
+            grid-area: cgl;
+            background-image: url(https://t4.ftcdn.net/jpg/02/99/89/57/360_F_299895747_QVmF3DufeglI6PN8uCxf2IMR1e4iTe4k.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            border-radius: 3px;
+            padding: 10px;
+
+            & h1 {
+                font-size: 1.3rem;
+                line-height: 4rem;
+            }
+
+            & p {
+                font-size: .8rem;
+
+                & a {
+                    color: white;
+                }
+            }
+        }
+
+        & .video-tutorial {
+            color: #5D35B0;
+            padding: 10px;
+            grid-area: vt;
+            border-radius: 3px;
+            border: 1px solid lightgray;
+        }
+
+        & .get-started-guide {
+            padding: 10px;
+            line-height: 2rem;
+            grid-area: gsg;
+            background-color: #5D35B0;
+            border-radius: 6px;
+            color: white;
+        }
+    }
+
+    & .main {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(4, 100px);
+        row-gap: 20px;
+        column-gap: 12px;
+        color: #5D35B0;
+
+        & .examples {
+            position: relative;
+            border-radius: 3px;
+            padding: 10px;
+            border: 1px solid lightgray;
+            grid-column: 1/4;
+        }
+
+        & .examples::before {
+            position: absolute;
+            color: white;
+            background: green;
+            padding: 4px;
+            font-size: .8rem;
+            content: "New!";
+            top: -.6rem;
+            left: -1.2rem;
+            transform: rotate(330deg);
+        }
+
+        & .patterns {
+            border-radius: 3px;
+            padding: 10px;
+            border: 1px solid lightgray;
+            grid-column: 4/8;
+        }
+
+        & .resources {
+            border-radius: 3px;
+            padding: 10px;
+            border: 1px solid lightgray;
+            grid-column: 1/6;
+        }
+
+        & .css-layout-news {
+            border-radius: 3px;
+            padding: 10px;
+            border: 1px solid lightgray;
+            grid-column: 6/8;
+        }
+
+        & .questions {
+            border-radius: 3px;
+            padding: 10px;
+            border: 1px solid lightgray;
+            grid-column: 1/4;
+        }
+
+        & .about-css-grid {
+            border-radius: 3px;
+            padding: 10px;
+            border: 1px solid lightgray;
+            grid-column: 4/6;
+        }
+
+        & .news {
+            border-radius: 3px;
+            padding: 10px;
+            border: 1px solid lightgray;
+            grid-column: 6/8;
+        }
+
+        & .grid-bugs {
+            border-radius: 3px;
+            padding: 10px;
+            border: 1px solid lightgray;
+            grid-column: 1/8;
+        }
+    }
+}
+
+@media (min-width: 768px){
+    body {
+        margin: 60px 8%;
+    }
+}
+
+@media (min-width: 992px){
+    body {
+        margin: 60px 14%;
+    }
+}
+
+@media (min-width: 1200px){
+    body {
+        margin: 60px 18%;
+    }
+}
+  
